@@ -1,4 +1,5 @@
 site_name: MkDocs by Isaac
+site_url: https://isaactadela.github.io/mkdocs-material/
 theme:
   name: material
   features:
