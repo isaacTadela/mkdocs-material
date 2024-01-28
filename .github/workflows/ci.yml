@@ -9,9 +9,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0 # fetch all commits/branches
+      - name: Checkout source files
+        uses: actions/checkout@v3
       - uses: actions/setup-python@v4
         with:
           python-version: 3.x
@@ -20,5 +19,4 @@ jobs:
           key: ${{ github.ref }}
           path: .cache
       - run: pip install mkdocs-material
-      - run: pip install pillow cairosvg
       - run: mkdocs gh-deploy --force
