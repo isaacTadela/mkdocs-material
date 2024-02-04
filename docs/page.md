@@ -55,14 +55,13 @@ theme:
             # yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
             ```
 
+## Configuration
+
+ testing again
+
   [^1]:
     If you're a MkDocs plugin or Markdown extension author and your project
     works with Material for MkDocs, you're very much invited to contribute a
     schema for your [extension] or [plugin] as part of a pull request on GitHub.
     If you already have a schema defined, or wish to self-host your schema to
     reduce duplication, you can add it via [$ref].
-
-
-## Configuration
-
- testing again
