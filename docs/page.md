@@ -65,11 +65,4 @@ theme:
 
 ## Configuration
 
-  [configuration validation and auto-complete]: https://twitter.com/squidfunk/status/1487746003692400642
-  [schema.json]: schema.json
-  [vscode-yaml]: https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
-  [settings.json]: https://code.visualstudio.com/docs/getstarted/settings
-  [extension]: https://github.com/squidfunk/mkdocs-material/tree/master/docs/schema/extensions
-  [plugin]: https://github.com/squidfunk/mkdocs-material/tree/master/docs/schema/plugins
-  [$ref]: https://json-schema.org/understanding-json-schema/structuring.html#ref
-  [icons and emojis]: reference/icons-emojis.md
+ testing again
