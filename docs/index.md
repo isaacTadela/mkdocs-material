@@ -19,3 +19,7 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 ## Version 5
 
 new section for v 0.5
+
+## Version 6
+
+new section for v 0.6
