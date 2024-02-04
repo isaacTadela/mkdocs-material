@@ -31,7 +31,7 @@ plugins:
   - social
   - privacy
   - mike:
-      canonical_version: latest
+        canonical_version: latest
       # These fields are all optional; the defaults are as below...
       # alias_type: symlink
       # redirect_template: null
