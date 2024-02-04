@@ -70,6 +70,7 @@ extra:
       - accept
       - manage
       - reject
+
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
@@ -81,6 +82,8 @@ markdown_extensions:
   - footnotes
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.mark
   - attr_list
   - pymdownx.emoji:
