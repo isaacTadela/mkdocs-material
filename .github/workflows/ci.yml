@@ -27,7 +27,7 @@ jobs:
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
 
-      - run: mike deploy --push --update-aliases 0.16 latest
+      - run: mkdocs gh-deploy --force # mike deploy --push --update-aliases 0.16 latest
 
       - run: mike list
 #      mkdocs gh-deploy --force
