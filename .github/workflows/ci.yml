@@ -9,23 +9,32 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v2
         with:
           fetch-depth: 0 # fetch all commits/branches
+
       - name: Configure Git Credentials
         run: |
+          remote_repo="https://${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+
       - uses: actions/setup-python@v5
         with:
           python-version: 3.x
-      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
-      - uses: actions/cache@v4
-        with:
-          key: mkdocs-material-${{ env.cache_id }}
-          path: .cache
-          restore-keys: |
-            mkdocs-material-
+
+#      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
+
+#      - uses: actions/cache@v4
+#        with:
+#          key: mkdocs-material-${{ env.cache_id }}
+#          path: .cache
+#          restore-keys: |
+#            mkdocs-material-
+
       - run: pip install mkdocs-material; pip install "mkdocs-material[imaging]"; pip install mike
+
       - run: mike deploy --push --update-aliases 0.16 latest --ignore-remote-status
+
+      - run: mike list
 #      mkdocs gh-deploy --force
