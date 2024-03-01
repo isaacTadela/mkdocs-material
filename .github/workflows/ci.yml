@@ -32,8 +32,7 @@ jobs:
       # - run: mkdocs gh-deploy --force
       # - run: mike deploy --push --update-aliases 0.16 latest
       - name: mike deploy
-        run : echo 'mike deploy'
-        # run: mike deploy --push --update-aliases ${{ github.ref_name }} latest --alias-type=redirect
+        run: mike deploy --push --update-aliases ${{ github.ref_name }} latest --alias-type=redirect
 
       - name: mike list
         run: mike list
