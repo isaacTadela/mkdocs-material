@@ -10,18 +10,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Git Checkout
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0 # fetch all commits/branches
+        uses: actions/checkout@v4
+        # with:
+        #   fetch-depth: 0 # fetch all commits/branches
 
-      - name: Py install
+      - name: Set up Python 3.9.x
         uses: actions/setup-python@v2
         with:
           python-version: 3.9.x
 
-      - name: run pip install
+      - name: Install Python dependencies
         run: |
-          python -m pip install --upgrade pip
           pip install -r requirements.txt
 
       - name: Configure Git Credentials
@@ -33,7 +32,8 @@ jobs:
       # - run: mkdocs gh-deploy --force
       # - run: mike deploy --push --update-aliases 0.16 latest
       - name: mike deploy
-        run: mike deploy --push --update-aliases ${{ github.ref_name }} latest --alias-type=redirect
+        run : echo 'mike deploy'
+        # run: mike deploy --push --update-aliases ${{ github.ref_name }} latest --alias-type=redirect
 
       - name: mike list
         run: mike list
