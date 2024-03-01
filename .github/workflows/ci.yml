@@ -9,15 +9,18 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Git Checkout
+        uses: actions/checkout@v2
         with:
           fetch-depth: 0 # fetch all commits/branches
 
-      - uses: actions/setup-python@v2
+      - name: Py install
+        uses: actions/setup-python@v2
         with:
           python-version: 3.9.x
 
-      - run: |
+      - name: run pip install
+        run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
@@ -29,7 +32,9 @@ jobs:
 
       # - run: mkdocs gh-deploy --force
       # - run: mike deploy --push --update-aliases 0.16 latest
-      - run: mike deploy --push --update-aliases ${{ github.ref_name }} latest --alias-type=redirect
+      - name: mike deploy
+        run: mike deploy --push --update-aliases ${{ github.ref_name }} latest --alias-type=redirect
 
-      - run: mike list
+      - name: mike list
+        run: mike list
 #      mkdocs gh-deploy --force
