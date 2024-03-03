@@ -14,12 +14,6 @@ jobs:
         # with:
         #   fetch-depth: 0 # fetch all commits/branches
 
-      - name: Set variables
-        run: |
-          VER=$(cat VERSION)
-          echo "Deploy version $VER"
-          echo "VERSION=$VER" >> $GITHUB_ENV
-
       - name: Set up Python 3.9.x
         uses: actions/setup-python@v5
         with:
@@ -29,11 +23,11 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      #- name: Configure Git Credentials
-      #  run: |
-      #    remote_repo="https://${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-      #    git config user.name github-actions[bot]
-      #    git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+      - name: Configure Git Credentials
+        run: |
+          remote_repo="https://${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
       # - run: mkdocs gh-deploy --force
       # - run: mike deploy --push --update-aliases 0.16 latest
       # - name: mike deploy
@@ -42,3 +36,14 @@ jobs:
       - name: mike list
         run: mike list
 #      mkdocs gh-deploy --force
+
+      - name: Set variables
+        run: |
+          VER=$(cat VERSION)
+          echo "Deploy version $VER"
+          echo "VERSION=$VER" >> $GITHUB_ENV
+
+      - name: deploy
+        run: echo "mike deploy --push --update-aliases ${{ env.VERSION }} latest"
+      # - run: mkdocs gh-deploy --force
+      # - run: mike deploy --push --update-aliases 0.16 latest
