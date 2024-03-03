@@ -36,11 +36,11 @@ jobs:
           echo "Deploy version $VER"
           echo "VERSION=$VER" >> $GITHUB_ENV
 
-      # - name: Configure Git Credentials
-      #   run: |
-      #     remote_repo="https://${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-      #     git config user.name github-actions[bot]
-      #     git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+      - name: Configure Git Credentials
+        run: |
+          remote_repo="https://${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
       # - run: mkdocs gh-deploy --force
       # - run: mike deploy --push --update-aliases 0.16 latest
       # - name: mike deploy
