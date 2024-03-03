@@ -1,5 +1,5 @@
 mkdocs
 mkdocs-git-revision-date-plugin
-mkdocs-material==9.4.2
-mike==1.1.2
-mkdocs-pyscript==0.0.5
+mkdocs-material
+mike
+mkdocs-pyscript
