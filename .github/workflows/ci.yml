@@ -40,7 +40,7 @@ jobs:
 
       - name: Set variables
         run: |
-          VER=$(cat VERSION)
+          VER=$(cat ver)
           echo "Deploy version $VER"
           echo "VERSION=$VER" >> $GITHUB_ENV
 
