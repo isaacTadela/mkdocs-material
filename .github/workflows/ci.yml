@@ -20,7 +20,7 @@ jobs:
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git show gh-pages:versions.json > previous.versions.json
           GITHUB_PREV_ENV="$(jq -r '.[0].version' "previous.versions.json")"
-          cat $GITHUB_PREV_ENV
+          echo $GITHUB_PREV_ENV
 
       - name: Set variables
         run: |
