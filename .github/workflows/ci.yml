@@ -19,7 +19,7 @@ jobs:
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git show gh-pages:versions.json > previous.versions.json
-          echo previous.versions.json | jq '.[0].version previous.versions.json'
+          cat previous.versions.json | jq '.[0].version previous.versions.json'
 
       - name: Get previous versions
         uses: sergeysova/jq-action@v2
