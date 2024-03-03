@@ -2,4 +2,5 @@ mkdocs
 mkdocs-git-revision-date-plugin
 mkdocs-material
 mike
+mkdocs-material[imaging]
 mkdocs-pyscript
