@@ -19,6 +19,10 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Install Python dependencies
+        run: |
+          pip install -r requirements.txt
+
       - shell: bash -l {0}
         name: 'Display Python version and location'
         run: |
@@ -27,9 +31,7 @@ jobs:
              mike set-default latest
              pip show mike
 
-      - name: Install Python dependencies
-        run: |
-          pip install -r requirements.txt
+
       # - name: Configure Git Credentials
       #   run: |
       #     remote_repo="https://${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
