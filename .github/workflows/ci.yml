@@ -38,6 +38,7 @@ jobs:
 
       - name: Configure Git Credentials
         run: |
+          git fetch origin gh-pages --depth=1
           remote_repo="https://${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
