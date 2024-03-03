@@ -43,7 +43,7 @@ jobs:
           mike list
 
       - name: deploy
-        if: ${{ env.PREV_VER == env.VER }}
+        if: ${{ env.PREV_VER != env.VER }}
         run: |
-          echo "if $PREV_VER == $VER"
+          echo "Deploy version ${{ env.PREV_VER }} ==> ${{ env.VER }}"
           echo "mike deploy --push --update-aliases ${{ env.VERSION }} latest"
