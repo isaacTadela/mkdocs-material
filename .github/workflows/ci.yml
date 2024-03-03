@@ -23,7 +23,7 @@ jobs:
 
       - name: Compare versions
         run: |
-          PREV_VER="$(jq -r '.[1].version' "previous.versions.json")"
+          PREV_VER="$(jq -r '.[0].version' "previous.versions.json")"
           VER=$(cat ver)
           echo "PREV_VER=$PREV_VER" >> $GITHUB_ENV
           echo "VER=$VER" >> $GITHUB_ENV
