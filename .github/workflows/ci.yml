@@ -18,9 +18,10 @@ jobs:
           remote_repo="https://${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          # copy old version.json to previous.versions.json
           git show gh-pages:versions.json > previous.versions.json
 
-      - name: Check versions
+      - name: Compare versions
         run: |
           PREV_VER="$(jq -r '.[0].version' "previous.versions.json")"
           echo $PREV_VER
@@ -29,6 +30,7 @@ jobs:
           echo "Deploy version $PREV_VER --> $VER"
 
       - name: Set up Python 3.11
+        if: ${{ env.PREV_VER != env.VER }}
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
