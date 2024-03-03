@@ -99,4 +99,4 @@ markdown_extensions:
     emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 copyright: |
-  &copy; 2023 <a href="https://github.com/isaacTadela"  target="_blank" rel="noopener">Isaac Tadela</a>
+  &copy; 2024 <a href="https://github.com/isaacTadela"  target="_blank" rel="noopener">Isaac Tadela</a>
