@@ -24,10 +24,8 @@ jobs:
       - name: Compare versions
         run: |
           PREV_VER="$(jq -r '.[0].version' "previous.versions.json")"
-          echo $PREV_VER
           VER=$(cat ver)
-          echo "VERSION=$VER" >> $GITHUB_ENV
-          echo "Deploy version $PREV_VER --> $VER"
+          echo "Compare version $PREV_VER --> $VER"
 
       - name: Set up Python 3.11
         if: ${{ env.PREV_VER != env.VER }}
