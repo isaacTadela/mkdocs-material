@@ -31,3 +31,8 @@ new section for v 1.12
 ## Version 1.05
 
 new section for v 0.5
+
+## Version 0.7
+
+new section for v 0.7
+with the new deploy pipeline
