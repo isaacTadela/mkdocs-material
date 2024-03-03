@@ -20,7 +20,7 @@ jobs:
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git show gh-pages:versions.json > previous.versions.json
 
-      - name: Set variables
+      - name: Check versions
         run: |
           PREV_VER="$(jq -r '.[0].version' "previous.versions.json")"
           echo $PREV_VER
@@ -42,5 +42,8 @@ jobs:
           mike set-default latest
           mike list
 
-      # - name: deploy
-      #   run: mike deploy --push --update-aliases ${{ env.VERSION }} latest
+      - name: deploy
+        if: $PREV_VER == $VER
+        run: |
+          echo "if $PREV_VER == $VER"
+          echo "mike deploy --push --update-aliases ${{ env.VERSION }} latest"
