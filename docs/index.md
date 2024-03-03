@@ -36,3 +36,8 @@ new section for v 0.5
 
 new section for v 0.7
 with the new deploy pipeline
+
+## Version 0.8
+
+new section for v 0.8
+with the new deploy pipeline

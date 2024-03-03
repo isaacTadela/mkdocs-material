@@ -1,8 +1,11 @@
 # APIs
 
-changes after 'clean up' sha 72de89f
+changes after sha 4dea605
 
 ## New changes
+
+# Change after 4dea605
+1.  version 0.8
 
 # Change after 72de89f
 1.  the CI auto version bump and deploy is Working starting version 0.7

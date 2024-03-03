@@ -1,3 +1,3 @@
 # Test
 
-testing new version 0.7 latest
+testing new version 0.8 latest
