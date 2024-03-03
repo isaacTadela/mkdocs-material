@@ -1,5 +1,5 @@
 site_name: MkDocs by Isaac
-site_url: 'https://isaactadela.github.io/mkdocs-material/'
+site_url: "https://isaactadela.github.io/mkdocs-material"
 theme:
     name: material
     features:
@@ -28,13 +28,16 @@ theme:
         accent: lime
 
 plugins:
+  - mkdocs-pyscript:
+      pyscript_version: "snapshots/2023.11.1.RC3"
   - social
-  - privacy
+#  - privacy
 
 extra:
   version:
-    default: latest
     provider: mike
+    default: 'latest'
+
   analytics:
     provider: google
     property: G-LXSNVKRWNP
@@ -52,13 +55,15 @@ extra:
           note: >-
             Thanks for your feedback! Help us improve this page by
             using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
-  social:
+
+    social:
     - icon: fontawesome/brands/github-alt
       link: https://github.com/isaacTadela/
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/isaac-tadela/
+
   consent:
     title: Cookie consent
     description: >-
@@ -70,25 +75,25 @@ extra:
       - accept
       - manage
       - reject
-
 markdown_extensions:
-  - pymdownx.highlight:
-      anchor_linenums: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - admonition
-  - pymdownx.arithmatex:
-      generic: true
-  - footnotes
-  - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.tabbed:
+- pymdownx.highlight:
+    # generic: true
+    anchor_linenums: true
+    line_spans: __span
+    pygments_lang_class: true
+- pymdownx.inlinehilite
+- pymdownx.snippets
+- pymdownx.superfences
+- pymdownx.tabbed:
       alternate_style: true
-  - pymdownx.mark
-  - attr_list
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+- footnotes
+- pymdownx.details
+- pymdownx.mark
+- admonition
+- attr_list
+- pymdownx.emoji:
+    emoji_index: !!python/name:material.extensions.emoji.twemoji
+    emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 copyright: |
   &copy; 2023 <a href="https://github.com/isaacTadela"  target="_blank" rel="noopener">Isaac Tadela</a>
