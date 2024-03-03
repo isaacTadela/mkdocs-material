@@ -12,21 +12,14 @@ jobs:
       - name: Git Checkout
         uses: actions/checkout@v4
 
-      - name: Configure Git Credentials
+      - name: Configure Git
         run: |
           git fetch origin gh-pages:gh-pages --depth=1
           remote_repo="https://${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git show gh-pages:versions.json > previous.versions.json
-
-      - name: Set up Python 3.11
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Install Python dependencies
-        run: pip install -r requirements.txt
+          echo previous.versions.json | jq '.[0].version previous.versions.json'
 
       - name: Get previous versions
         uses: sergeysova/jq-action@v2
@@ -39,6 +32,14 @@ jobs:
           VER=$(cat ver)
           echo "VERSION=$VER" >> $GITHUB_ENV
           echo "Deploy version ${{ steps.prev_version.outputs.value }} --> $VER"
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
 
       - name: mike list
         run: |
