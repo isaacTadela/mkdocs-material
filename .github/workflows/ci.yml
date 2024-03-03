@@ -38,7 +38,7 @@ jobs:
         run: |
           VER=$(cat ver)
           echo "VERSION=$VER" >> $GITHUB_ENV
-          echo "Deploy version ${{ steps.version.outputs.value }} --> $VER"
+          echo "Deploy version ${{ steps.prev_version.outputs.value }} --> $VER"
 
       - name: mike list
         run: |
@@ -46,5 +46,5 @@ jobs:
           mike set-default latest
           mike list
 
-      - name: deploy
-        run: mike deploy --push --update-aliases ${{ env.VERSION }} latest
+      # - name: deploy
+      #   run: mike deploy --push --update-aliases ${{ env.VERSION }} latest
