@@ -50,4 +50,4 @@ jobs:
         if: ${{ env.PREV_VER != env.VER }}
         run: |
           echo "Deploy version ${{ env.PREV_VER }} ==> ${{ env.VER }}"
-          echo "mike deploy --push --update-aliases ${{ env.VERSION }} latest"
+          mike deploy --push --update-aliases ${{ env.VERSION }} latest
