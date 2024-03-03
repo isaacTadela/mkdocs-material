@@ -11,8 +11,13 @@ jobs:
     steps:
       - name: Git Checkout
         uses: actions/checkout@v4
-        # with:
-        #   fetch-depth: 0 # fetch all commits/branches
+
+      - name: Configure Git Credentials
+        run: |
+          git fetch origin gh-pages --depth=1
+          remote_repo="https://${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
 
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
@@ -20,8 +25,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install Python dependencies
-        run: |
-          pip install -r requirements.txt
+        run: pip install -r requirements.txt
 
       - name: Set variables
         run: |
@@ -31,18 +35,6 @@ jobs:
           echo "VERSION=$VER" >> $GITHUB_ENV
           echo "Deploy version $OLD_VER --> $VER"
 
-
-      - name: Configure Git Credentials
-        run: |
-          git fetch origin gh-pages --depth=1
-          remote_repo="https://${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-      # - run: mkdocs gh-deploy --force
-      # - run: mike deploy --push --update-aliases 0.16 latest
-      # - name: mike deploy
-      #   run: mike deploy --push --update-aliases ${{ github.ref_name }} latest --alias-type=redirect
-
       - name: mike list
         run: |
           mike deploy --update-aliases ${{ env.VERSION }} latest
@@ -51,5 +43,3 @@ jobs:
 
       - name: deploy
         run: mike deploy --push --update-aliases ${{ env.VERSION }} latest
-      # - run: mkdocs gh-deploy --force
-      # - run: mike deploy --push --update-aliases 0.16 latest
