@@ -23,18 +23,14 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - shell: bash -l {0}
-        name: 'Display Python version and location'
-        run: |
-             python --version
-             which python
-             pip show mike
-
       - name: Set variables
         run: |
+          git show gh-pages:versions.json > previous.versions.json
           VER=$(cat ver)
-          echo "Deploy version $VER"
+          jq '.[0].version' previous.versions.json >> $OLD_VER
           echo "VERSION=$VER" >> $GITHUB_ENV
+          echo "Deploy version $OLD_VER --> $VER"
+
 
       - name: Configure Git Credentials
         run: |
