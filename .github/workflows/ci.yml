@@ -19,6 +19,12 @@ jobs:
         with:
           python-version: '3.9.x'
 
+      - shell: bash -l {0}
+        name: 'Display Python version and location'
+        run: |
+             python --version
+             which python
+
       - name: Install Python dependencies
         run: |
           pip install -r requirements.txt
