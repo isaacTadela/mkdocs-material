@@ -5,7 +5,7 @@ changes after sha 5f17656
 ## New changes
 
 # Change after 5f17656
-1.  the CI is Working starting version 0.5
+1.  the CI is Working starting version 0.6
 
 # Change after 63ff3fc
 1.  added CHANGES.md .
