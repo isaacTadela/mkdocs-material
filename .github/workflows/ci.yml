@@ -19,7 +19,7 @@ jobs:
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git show gh-pages:versions.json > previous.versions.json
-          jq '.[0].version' -r previous.versions.jsony >> "$PREV_VER"
+          cat previous.versions.json | jq '.[0].version' -r >> "$PREV_VER"
 
       - name: Set variables
         run: |
