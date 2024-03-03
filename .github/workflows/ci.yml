@@ -24,12 +24,12 @@ jobs:
         run: |
              python --version
              which python
+             mike set-default latest
+             pip show mike
 
       - name: Install Python dependencies
         run: |
           pip install -r requirements.txt
-          pip show mike
-
       # - name: Configure Git Credentials
       #   run: |
       #     remote_repo="https://${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
