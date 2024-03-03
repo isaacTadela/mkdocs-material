@@ -18,6 +18,7 @@ jobs:
           remote_repo="https://${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git show gh-pages:versions.json > previous.versions.json
 
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
@@ -29,7 +30,6 @@ jobs:
 
       - name: Set variables
         run: |
-          git show gh-pages:versions.json > previous.versions.json
           VER=$(cat ver)
           jq '.[0].version' previous.versions.json >> $OLD_VER
           echo "VERSION=$VER" >> $GITHUB_ENV
