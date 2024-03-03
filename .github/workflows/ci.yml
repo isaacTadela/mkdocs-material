@@ -28,9 +28,13 @@ jobs:
         run: |
              python --version
              which python
-             mike set-default latest
              pip show mike
 
+      - name: Set variables
+        run: |
+          VER=$(cat ver)
+          echo "Deploy version $VER"
+          echo "VERSION=$VER" >> $GITHUB_ENV
 
       # - name: Configure Git Credentials
       #   run: |
@@ -44,13 +48,9 @@ jobs:
 
       - name: mike list
         run: |
+          mike deploy --update-aliases ${{ env.VERSION }} latest
+          mike set-default latest
           mike list
-
-      - name: Set variables
-        run: |
-          VER=$(cat ver)
-          echo "Deploy version $VER"
-          echo "VERSION=$VER" >> $GITHUB_ENV
 
       - name: deploy
         run: echo "mike deploy --push --update-aliases ${{ env.VERSION }} latest"
