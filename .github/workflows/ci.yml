@@ -28,13 +28,17 @@ jobs:
       - name: Install Python dependencies
         run: pip install -r requirements.txt
 
-      - name: Set variables
+      - name: Get previous versions
         uses: sergeysova/jq-action@v2
+        id: prev_version
+        with:
+          cmd: 'jq .[0].version previous.versions.json -r'
+
+      - name: Set variables
         run: |
           VER=$(cat ver)
-          jq '.[0].version' previous.versions.json >> $OLD_VER
           echo "VERSION=$VER" >> $GITHUB_ENV
-          echo "Deploy version $OLD_VER --> $VER"
+          echo "Deploy version ${{ steps.version.outputs.value }} --> $VER"
 
       - name: mike list
         run: |
