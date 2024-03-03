@@ -43,7 +43,7 @@ jobs:
         if: ${{ env.PREV_VER != env.VER }}
         run: |
           # mike deploy --update-aliases ${{ env.VER }} latest
-          mike set-default latest
+          # mike set-default latest
           mike list
 
       - name: deploy
