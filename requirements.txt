@@ -1,6 +1,9 @@
-mkdocs
-mkdocs-git-revision-date-plugin
-mkdocs-material
-mike
+mkdocs==1.5.3
+mkdocs-git-revision-date-plugin==0.3.2
+mkdocs-material==9.5.12
+mike==2.0.0
 mkdocs-material[imaging]
-mkdocs-pyscript
+mkdocs-pyscript==0.1.1
+mkdocs-git-committers-plugin-2==2.3.0
+mkdocs-git-authors-plugin==0.7.2
+mkdocs-git-revision-date-localized-plugin==1.2.4

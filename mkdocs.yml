@@ -31,7 +31,15 @@ plugins:
   - mkdocs-pyscript:
       pyscript_version: "snapshots/2023.11.1.RC3"
   - social
-#  - privacy
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: date
+  - git-committers:
+      repository: isaacTadela/mkdocs-material
+      branch: main
+  - git-authors
+  - privacy:
+      concurrency: 1
 
 extra:
   version:
@@ -75,6 +83,7 @@ extra:
       - accept
       - manage
       - reject
+
 markdown_extensions:
 - pymdownx.highlight:
     # generic: true

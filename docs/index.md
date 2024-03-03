@@ -18,26 +18,28 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
 ## Version 1.5
 
-new section for v 1.5
+new section for v 1.5.
 
 ## Version 1.6
 
-new section for v 1.6
+new section for v 1.6.
 
 ## Version 1.12
 
-new section for v 1.12
+new section for v 1.12.
 
 ## Version 1.05
 
-new section for v 0.5
+new section for v 0.5.
 
 ## Version 0.7
 
-new section for v 0.7
-with the new deploy pipeline
+new section for v 0.7.
+with the new deploy pipeline.
 
 ## Version 0.8
 
-new section for v 0.8
-with the new deploy pipeline
+new section for v 0.8.
+with the new deploy pipeline.
+
+---

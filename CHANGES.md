@@ -1,6 +1,6 @@
 # Changes
 
-## v0.2 (in progress)
+## v0.9 (in progress)
 
 ### New features
 
