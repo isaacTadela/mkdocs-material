@@ -28,4 +28,6 @@ new section for v 1.6
 
 new section for v 1.12
 
+## Version 1.05
 
+new section for v 0.5
