@@ -22,7 +22,7 @@ jobs:
       - name: Install Python dependencies
         run: |
           pip install -r requirements.txt
-          pip show def_list
+          pip show mike
 
       - name: Configure Git Credentials
         run: |
