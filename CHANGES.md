@@ -1,6 +1,8 @@
 # Changes
 
-## v0.11 (in progress)
+## v0.12 (in progress)
+
+## v0.11
 
 ## v0.9
 

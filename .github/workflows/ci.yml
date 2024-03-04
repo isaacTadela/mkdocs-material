@@ -42,6 +42,7 @@ jobs:
       - name: deploy
         if: ${{ env.PREV_VER != env.VER }}
         run: |
+          mike retitle 0.9 0.9
           mike retitle ${{ env.PREV_VER }} ${{ env.PREV_VER }}
           echo "Deploy version ${{ env.PREV_VER }} ==> ${{ env.VER }}"
           mike deploy -t "${{ env.VER }} (latest)" -u -p ${{ env.VER }} latest

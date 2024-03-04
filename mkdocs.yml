@@ -1,11 +1,20 @@
+# Project information
 site_name: MkDocs by Isaac
-site_url: https://isaactadela.github.io/mkdocs-material
+site_url: https://isaactadela.github.io/mkdocs-material/
+site_author: Isaac Tadela
+site_description: >-
+  Write your documentation in Markdown and create a professional static site in
+  minutes – searchable, customizable, in 60+ languages, for all devices
+
+# Repository
 repo_url: https://github.com/isaacTadela/mkdocs-material
 repo_name: isaacTadela/mkdocs-material
 
+# Copyright
 copyright: |
   &copy; 2024 <a href="https://github.com/isaacTadela"  target="_blank" rel="noopener">Isaac Tadela</a>
 
+# Configuration
 theme:
     name: material
     icon:
@@ -93,6 +102,10 @@ extra:
       - accept
       - manage
       - reject
+
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/isaacTadela
 
 markdown_extensions:
 - pymdownx.highlight:
