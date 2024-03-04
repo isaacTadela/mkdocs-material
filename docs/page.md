@@ -1,19 +1,20 @@
 # Versioning
 
-This is second or first version??
+Update files with each change:
+
+- [x] file ver in home directory
+- [ ] CHANGES.md
+    * [x] New features
+    * [x] Breaking changes
+    * [ ] Bug fixes
+- [ ] the rest of your changes
 
 ## Configuration
 
 ### Minimal configuration
 
 Simply add the following lines to `mkdocs.yml` to enable the theme:
-
-``` yaml
-theme:
-  name: material
-```
-
-  [installation methods]: getting-started.md#installation
+[installation methods]: getting-started.md#installation
 
 ???+ tip "Recommended: [configuration validation and auto-complete]"
 
@@ -61,5 +62,3 @@ theme:
     schema for your [extension] or [plugin] as part of a pull request on GitHub.
     If you already have a schema defined, or wish to self-host your schema to
     reduce duplication, you can add it via [$ref].
-
----
