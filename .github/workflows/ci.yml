@@ -44,7 +44,8 @@ jobs:
         run: |
           # mike deploy --update-aliases ${{ env.VER }} latest
           # mike set-default latest
-          mike list --prop-delete-all
+          mike props --delete-all
+          mike list
 
       - name: deploy
         if: ${{ env.PREV_VER != env.VER }}
