@@ -1,7 +1,16 @@
 site_name: MkDocs by Isaac
-site_url: "https://isaactadela.github.io/mkdocs-material"
+site_url: https://isaactadela.github.io/mkdocs-material
+repo_url: https://github.com/isaacTadela/mkdocs-material
+repo_name: isaacTadela/mkdocs-material
+
+copyright: |
+  &copy; 2024 <a href="https://github.com/isaacTadela"  target="_blank" rel="noopener">Isaac Tadela</a>
+
 theme:
     name: material
+    icon:
+      repo: fontawesome/brands/github
+      view: material/eye
     features:
       - navigation.tabs
       - navigation.sections
@@ -12,6 +21,7 @@ theme:
       - content.tabs.link
       - content.code.annotation
       - content.code.copy
+      - content.action.view
     language: en
     palette:
       - scheme: slate
@@ -107,5 +117,3 @@ markdown_extensions:
     emoji_index: !!python/name:material.extensions.emoji.twemoji
     emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
-copyright: |
-  &copy; 2024 <a href="https://github.com/isaacTadela"  target="_blank" rel="noopener">Isaac Tadela</a>
