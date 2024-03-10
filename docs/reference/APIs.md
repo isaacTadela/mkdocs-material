@@ -6,7 +6,8 @@ changes after sha 71e84b7
 
 ### Change after 71e84b7
 
-1. update pages name by their title
+1. update pages name by their title.
+
 2. test [mkdocs-git-committers-plugin](https://github.com/byrnereese/mkdocs-git-committers-plugin).
 
 ### Change after 4dea605
