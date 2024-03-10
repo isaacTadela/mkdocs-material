@@ -59,7 +59,7 @@ plugins:
   - git-committers:
       repository: isaacTadela/mkdocs-material
       branch: main
-      token: "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"
+      token: !ENV MKDOCS_GIT_COMMITTERS_APIKEY
   - git-authors
   - privacy:
       concurrency: 1
