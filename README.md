@@ -11,6 +11,8 @@ mike serve
 # set it as the new version
 mike deploy --update-aliases X.Y.Z latest
 
+# update the 'ver' file with the new version which for this example be X.Y.Z-1
+
 # psuh to git
 git push
 ```
