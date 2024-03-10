@@ -7,8 +7,8 @@ site_description: >-
   minutes – searchable, customizable, in 60+ languages, for all devices
 
 # Repository
-repo_url: https://github.com/isaacTadela/mkdocs-material
-repo_name: isaacTadela/mkdocs-material
+repo_url: https://github.com/isaacTadela/mkdocs-material.github.io
+repo_name: isaacTadela-mkdocs
 # repo_url: https://github.com/squidfunk/mkdocs-material
 # repo_name: squidfunk/mkdocs-material
 edit_uri: edit/main/docs/
@@ -52,14 +52,15 @@ theme:
 plugins:
   - mkdocs-pyscript:
   - social
-  - search
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   - git-revision-date-localized:
       enable_creation_date: true
       type: date
   - git-committers:
       repository: isaacTadela/mkdocs-material
       branch: main
-      token: !ENV MKDOCS_GIT_COMMITTERS_APIKEY
+      enabled: true
   - git-authors
   - privacy:
       concurrency: 1

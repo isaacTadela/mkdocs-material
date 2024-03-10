@@ -40,5 +40,4 @@ then run ```mike serve``` to see the changes.
 3. push to remote by running ```mike deploy --push --update-aliases 0.4 latest```.
       and go to the site [isaactadela.github.io](https://isaactadela.github.io/mkdocs-material/).
 
-[isaactadela.github.io](https://isaactadela.github.io/mkdocs-material/)
 ---
