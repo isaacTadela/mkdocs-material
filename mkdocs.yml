@@ -7,10 +7,8 @@ site_description: >-
   minutes – searchable, customizable, in 60+ languages, for all devices
 
 # Repository
-repo_url: https://github.com/isaacTadela/mkdocs-material.github.io
+repo_url: https://github.com/isaacTadela/mkdocs-material
 repo_name: isaacTadela-mkdocs
-# repo_url: https://github.com/squidfunk/mkdocs-material
-# repo_name: squidfunk/mkdocs-material
 edit_uri: edit/main/docs/
 
 # Copyright
@@ -21,7 +19,7 @@ copyright: |
 theme:
     name: material
     icon:
-      repo: fontawesome/brands/github
+      repo: fontawesome/brands/git-alt
       view: material/eye
     features:
       - navigation.tabs
@@ -50,8 +48,7 @@ theme:
         accent: lime
 
 plugins:
-  - mkdocs-pyscript:
-      pyscript_version: "snapshots/2023.11.1.RC3"
+  - mkdocs-pyscript
   - social
   - search:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
