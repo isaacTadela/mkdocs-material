@@ -9,6 +9,9 @@ site_description: >-
 # Repository
 repo_url: https://github.com/isaacTadela/mkdocs-material
 repo_name: isaacTadela/mkdocs-material
+# repo_url: https://github.com/squidfunk/mkdocs-material
+# repo_name: squidfunk/mkdocs-material
+edit_uri: edit/main/docs/
 
 # Copyright
 copyright: |
@@ -18,8 +21,8 @@ copyright: |
 theme:
     name: material
     icon:
-      repo: fontawesome/brands/github
-      view: material/eye
+      repo: fontawesome/brands/git-alt
+      # view: material/eye
     features:
       - navigation.tabs
       - navigation.sections
@@ -48,8 +51,8 @@ theme:
 
 plugins:
   - mkdocs-pyscript:
-      pyscript_version: "snapshots/2023.11.1.RC3"
   - social
+  # - search
   - git-revision-date-localized:
       enable_creation_date: true
       type: date
@@ -107,6 +110,12 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/isaacTadela
 
+  repo:
+    facts:
+      - latest
+      - stars
+      - forks
+
 markdown_extensions:
 - pymdownx.highlight:
     # generic: true
@@ -129,4 +138,5 @@ markdown_extensions:
 - pymdownx.emoji:
     emoji_index: !!python/name:material.extensions.emoji.twemoji
     emoji_generator: !!python/name:material.extensions.emoji.to_svg
-
+- toc:
+    permalink: true
