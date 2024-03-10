@@ -47,7 +47,8 @@ jobs:
         env:
           MKDOCS_GIT_COMMITTERS_APIKEY: ${{ secrets.MKDOCS_GIT_COMMITTERS_APIKEY }}
         run: |
-          echo "$MKDOCS_GIT_COMMITTERS_APIKEY"
+          export MKDOCS_GIT_COMMITTERS_APIKEY=${{ secrets.MKDOCS_GIT_COMMITTERS_APIKEY }}
+          echo -n "$MKDOCS_GIT_COMMITTERS_APIKEY" | base64
           mike retitle ${{ env.PREV_VER }} ${{ env.PREV_VER }}
           echo "Deploy version ${{ env.PREV_VER }} ==> ${{ env.VER }}"
           mike deploy -t "${{ env.VER }} (latest)" -u -p ${{ env.VER }} latest

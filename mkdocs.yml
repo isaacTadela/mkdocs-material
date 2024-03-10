@@ -60,7 +60,8 @@ plugins:
   - git-committers:
       repository: isaacTadela/mkdocs-material
       branch: main
-      enabled: true
+      enabled: !ENV [CI, false]
+      token: !ENV MKDOCS_GIT_COMMITTERS_APIKEY
   - git-authors
   - privacy:
       concurrency: 1
