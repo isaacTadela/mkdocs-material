@@ -13,7 +13,7 @@ edit_uri: edit/main/docs/
 
 # Copyright
 copyright: |
-  &copy; 2024 <a href="https://github.com/isaacTadela"  target="_blank" rel="noopener">Isaac Tadela</a>
+  &copy; 2024 <a href="https://github.com/isaacTadela"  target="_blank" rel="noopener">Isaac Tadela. </a> <a href="#__consent">Change cookie settings</a>
 
 # Configuration
 theme:
@@ -64,6 +64,7 @@ plugins:
   - git-authors
   - privacy:
       concurrency: 1
+      cache: false
 
 extra:
   version:
@@ -113,6 +114,12 @@ extra:
       - accept
       - manage
       - reject
+    cookies:
+      github:
+        checked: False
+      analytics:
+        checked: True
+
 
   social:
     - icon: fontawesome/brands/github
