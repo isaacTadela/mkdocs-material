@@ -25,12 +25,16 @@ jobs:
           echo "$MKDOCS_GIT_COMMITTERS_APIKEY"
 
       - name: Compare versions
+        env:
+          MKDOCS_GIT_COMMITTERS_APIKEY: ${{ secrets.MKDOCS_GIT_COMMITTERS_APIKEY }}
         run: |
           PREV_VER="$(jq -r '.[0].version' "previous.versions.json")"
           VER=$(cat ver)
           echo "PREV_VER=$PREV_VER" >> $GITHUB_ENV
           echo "VER=$VER" >> $GITHUB_ENV
           echo "Compare version $PREV_VER --> $VER"
+          export MKDOCS_GIT_COMMITTERS_APIKEY=${{ secrets.MKDOCS_GIT_COMMITTERS_APIKEY }}
+          echo -n "$MKDOCS_GIT_COMMITTERS_APIKEY" | base64
 
       - name: Set up Python 3.11
         if: ${{ env.PREV_VER != env.VER }}
