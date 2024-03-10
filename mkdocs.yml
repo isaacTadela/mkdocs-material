@@ -17,35 +17,35 @@ copyright: |
 
 # Configuration
 theme:
-    name: material
-    icon:
-      repo: fontawesome/brands/git-alt
-      view: material/eye
-    features:
-      - navigation.tabs
-      - navigation.sections
-      - toc.integrate
-      - navigation.top
-      - search.suggest
-      - search.highlight
-      - content.tabs.link
-      - content.code.annotation
-      - content.code.copy
-      - content.action.view
-    language: en
-    palette:
-      - scheme: slate
-        toggle:
-          icon: material/toggle-switch-off-outline
-          name: Switch to light mode
-        primary: teal
-        accent: purple
-      - scheme: default
-        toggle:
-          icon: material/toggle-switch
-          name: Switch to dark mode
-        primary: teal
-        accent: lime
+  name: material
+  icon:
+    repo: fontawesome/brands/git-alt
+    view: material/eye
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+    - content.action.view
+  language: en
+  palette:
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
+      primary: teal
+      accent: purple
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+      primary: teal
+      accent: lime
 
 plugins:
   - mkdocs-pyscript
@@ -58,8 +58,9 @@ plugins:
   - git-committers:
       repository: isaacTadela/mkdocs-material
       branch: main
-      enabled: true
+      enabled: True
       token: !ENV ["MKDOCS_GIT_COMMITTERS_APIKEY"]
+
   - git-authors
   - privacy:
       concurrency: 1
@@ -68,6 +69,12 @@ extra:
   version:
     provider: mike
     default: 'latest'
+
+  repo:
+    facts:
+      - latest
+      - stars
+      - forks
 
   analytics:
     provider: google
