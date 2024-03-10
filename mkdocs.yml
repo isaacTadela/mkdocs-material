@@ -21,8 +21,8 @@ copyright: |
 theme:
     name: material
     icon:
-      repo: fontawesome/brands/git-alt
-      # view: material/eye
+      repo: fontawesome/brands/github
+      view: material/eye
     features:
       - navigation.tabs
       - navigation.sections
@@ -51,6 +51,7 @@ theme:
 
 plugins:
   - mkdocs-pyscript:
+      pyscript_version: "snapshots/2023.11.1.RC3"
   - social
   - search:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
@@ -113,12 +114,6 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/isaacTadela
 
-  repo:
-    facts:
-      - latest
-      - stars
-      - forks
-
 markdown_extensions:
 - pymdownx.highlight:
     # generic: true
@@ -141,5 +136,4 @@ markdown_extensions:
 - pymdownx.emoji:
     emoji_index: !!python/name:material.extensions.emoji.twemoji
     emoji_generator: !!python/name:material.extensions.emoji.to_svg
-- toc:
-    permalink: true
+
