@@ -1,8 +1,12 @@
 # APIs
 
-changes after sha 4dea605
+changes after sha 71e84b7
 
 ## New changes
+
+### Change after 71e84b7
+1. update pages name by their title
+2. test [mkdocs-git-committers-plugin](https://github.com/byrnereese/mkdocs-git-committers-plugin).
 
 ### Change after 4dea605
 
@@ -24,7 +28,7 @@ changes after sha 4dea605
       ```def_list```
 
 3. push to remote by running ```mike deploy --push --update-aliases 0.4 latest```.
-    and go to the site [isaactadela.github.io](https://isaactadela.github.io/mkdocs-material/).
+    and go to the site [isaactadela.github.io]
 
 ### Change after b05b275
 
@@ -36,4 +40,5 @@ then run ```mike serve``` to see the changes.
 3. push to remote by running ```mike deploy --push --update-aliases 0.4 latest```.
       and go to the site [isaactadela.github.io](https://isaactadela.github.io/mkdocs-material/).
 
+[isaactadela.github.io](https://isaactadela.github.io/mkdocs-material/)
 ---
