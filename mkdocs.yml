@@ -62,9 +62,7 @@ plugins:
       token: !ENV ["MKDOCS_GIT_COMMITTERS_APIKEY"]
 
   - git-authors
-  - privacy:
-      concurrency: 1
-      cache: false
+  - privacy
 
 extra:
   version:
@@ -114,12 +112,6 @@ extra:
       - accept
       - manage
       - reject
-    cookies:
-      github:
-        checked: False
-      analytics:
-        checked: True
-
 
   social:
     - icon: fontawesome/brands/github
