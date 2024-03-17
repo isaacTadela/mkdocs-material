@@ -1,6 +1,6 @@
 # Project information
 site_name: MkDocs by Isaac
-site_url: https://isaactadela.github.io/mkdocs-material/
+site_url: 'https://isaactadela.github.io/mkdocs-material/'
 site_author: Isaac Tadela
 site_description: >-
   Write your documentation in Markdown and create a professional static site in
@@ -23,7 +23,6 @@ theme:
     repo: fontawesome/brands/git-alt
     view: material/eye
   features:
-    - navigation.tabs
     - navigation.sections
     - toc.integrate
     - navigation.top
@@ -32,7 +31,15 @@ theme:
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
-    - content.action.view
+    - content.action
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.footer
+    - content.action.edit
+    - content.code.annotate
+
   language: en
   palette:
     - scheme: slate
@@ -67,6 +74,7 @@ plugins:
 
 # Customization
 extra:
+  generator: false
   version:
     method: mike
     provider: mike
