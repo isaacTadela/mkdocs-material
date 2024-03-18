@@ -3,7 +3,7 @@ mkdocs~=1.5.3
 mkdocs-macros-plugin==0.7.0
 mkdocs-minify-plugin==0.5.0
 mkdocs-redirects==1.0.4
-
+mkdocs-material[imaging]
 packaging==21.3
 pymdown-extensions~=10.3
 pyparsing==3.0.8
