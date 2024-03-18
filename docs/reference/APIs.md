@@ -1,8 +1,12 @@
 # APIs
 
-changes after sha 71e84b7
+changes after sha 38fd924
 
 ## New changes
+
+### Change after 38fd924
+
+2. test [stay-on-the-same-page-when-switching-versions](https://squidfunk.github.io/mkdocs-material/setup/setting-up-versioning/#stay-on-the-same-page-when-switching-versions)
 
 ### Change after 71e84b7
 
