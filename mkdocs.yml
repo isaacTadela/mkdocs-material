@@ -18,7 +18,7 @@ copyright: |
 # Configuration
 theme:
   name: material
-  custom_dir: overrides
+  # custom_dir: overrides
   icon:
     repo: fontawesome/brands/git-alt
     view: material/eye
@@ -77,6 +77,8 @@ plugins:
   - git-authors
   - privacy
   - macros
+  - mike:
+      alias_type: copy
   - search:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   - git-revision-date-localized:
@@ -136,6 +138,8 @@ extra:
       link: https://github.com/isaacTadela
 
 markdown_extensions:
+  - toc:
+      permalink: true
   - pymdownx.highlight:
       # generic: true
       anchor_linenums: true
@@ -155,6 +159,5 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg

@@ -52,6 +52,7 @@ jobs:
           echo -n "$MKDOCS_GIT_COMMITTERS_APIKEY" | base64
           mike retitle ${{ env.PREV_VER }} ${{ env.PREV_VER }}
           echo "Deploy version ${{ env.PREV_VER }} ==> ${{ env.VER }}"
-          mike deploy -t "${{ env.VER }}" -u -p ${{ env.VER }} ${{ env.VER }}
+          mike set-default latest
+          mike deploy -t "${{ env.VER }}" -u -p ${{ env.VER }} latest
           mike list
 
