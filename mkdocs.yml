@@ -23,20 +23,25 @@ theme:
     repo: fontawesome/brands/git-alt
     view: material/eye
   features:
-    - navigation.sections
     - toc.integrate
     - navigation.top
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.prune
+    - navigation.indexes
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.footer
     - search.suggest
     - search.highlight
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
     - content.action
-    - navigation.tabs
-    - navigation.tabs.sticky
-    - navigation.instant
-    - navigation.instant.prefetch
-    - navigation.footer
     - content.action.edit
     - content.code.annotate
 
@@ -55,6 +60,17 @@ theme:
       primary: teal
       accent: lime
 
+# Page tree
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Overview: index.md
+      - Installation: examples.md
+      - ESP32: esp32.md
+      - Signature Verification: reference/GIT.md
+      - FAQ: reference/APIs.md
+
+# Plugins
 plugins:
   - mkdocs-pyscript
   - social
