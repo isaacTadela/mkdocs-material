@@ -6,3 +6,4 @@ Some good looking examples:
 - [Backstage mkdocs.yml](https://github.com/backstage/backstage/blob/master/mkdocs.yml).
 - [Aquasecurity-trivy mkdocs.yml](https://github.com/aquasecurity/trivy/blob/main/mkdocs.yml).
 - [medium mkdocs-plugins](https://chrieke.medium.com/the-best-mkdocs-plugins-and-customizations-fc820eb19759)
+- [hatch](https://github.com/pypa/hatch/tree/master)
