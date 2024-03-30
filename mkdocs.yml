@@ -15,6 +15,9 @@ edit_uri: edit/main/docs/
 copyright: |
   &copy; 2024 <a href="https://github.com/isaacTadela"  target="_blank" rel="noopener">Isaac Tadela. </a> <a href="#__consent">Change cookie settings</a>
 
+docs_dir: docs
+site_dir: site
+
 # Configuration
 theme:
   name: material
@@ -64,16 +67,15 @@ theme:
 nav:
   - Home: index.md
   - Getting Started:
-      - Overview: index.md
-      - Installation: examples.md
-      - ESP32: esp32.md
-      - Signature Verification: reference/GIT.md
-      - FAQ: reference/APIs.md
+    - Overview: index.md
+    - Installation: examples.md
+    - ESP32: esp32.md
+    - Signature Verification: reference/GIT.md
+    - FAQ: reference/APIs.md
 
 # Plugins
 plugins:
   - mkdocs-pyscript
-  - social
   - git-authors
   - privacy
   - macros
