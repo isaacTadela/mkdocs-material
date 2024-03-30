@@ -11,6 +11,9 @@ jobs:
     steps:
       - name: Git Checkout
         uses: actions/checkout@v4
+        with:
+          # Fetch all history for applying timestamps to every page
+          fetch-depth: 0
 
       - name: Configure Git
         run: |
