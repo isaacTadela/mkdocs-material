@@ -34,10 +34,10 @@ git remote -v
 git remote set-url origin [repo-url]
 
 # for this repo for example is:
-git remote set-url origin https://isaacTadela:github_XXXXXXX@github.com/isaacTadela/mkdocs-material.git
+git remote set-url origin https://isaacTadela:ghp_XXXX@github.com/isaacTadela/mkdocs-material.git
 
 # for private gitlab instance:
-git remote set-url origin https://<USERNAME>:github_XXXXXXX@gitlab.xyz.cloud/<PROJECT>/<REPO>.git
+git remote set-url origin https://<USERNAME>:ghp_XXXX@gitlab.xyz.cloud/<PROJECT>/<REPO>.git
 
 git remote -v
 ```
