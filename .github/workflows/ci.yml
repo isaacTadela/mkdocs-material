@@ -28,7 +28,7 @@ jobs:
         env:
           MKDOCS_GIT_COMMITTERS_APIKEY: ${{ secrets.MKDOCS_GIT_COMMITTERS_APIKEY }}
         run: |
-          PREV_VER="$(jq -r '.[0].version' "previous.versions.json")"
+          # PREV_VER="$(jq -r '.[0].version' "previous.versions.json")"
           PREV_VER="0.1.0"
           VER=$(cat ver)
           echo "PREV_VER=$PREV_VER" >> $GITHUB_ENV
