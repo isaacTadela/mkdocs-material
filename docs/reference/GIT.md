@@ -22,3 +22,22 @@ Get-ChildItem -Recurse -Directory -Hidden -Filter .git | ForEach-Object { & git 
 ```sh
 for repo in $(curl -s --header "PRIVATE-TOKEN: your_private_token" https://<your-host>/api/v4/groups/<group_id> | jq -r ".projects[].ssh_url_to_repo"); do git clone $repo; done;
 ```
+
+## Update git creds
+
+### Local token
+
+update git token
+```sh
+git remote -v
+
+git remote set-url origin [repo-url]
+
+# for this repo for example is:
+git remote set-url origin https://isaacTadela:github_XXXXXXX@github.com/isaacTadela/mkdocs-material.git
+
+# for private gitlab instance:
+git remote set-url origin https://<USERNAME>:github_XXXXXXX@gitlab.xyz.cloud/<PROJECT>/<REPO>.git
+
+git remote -v
+```
