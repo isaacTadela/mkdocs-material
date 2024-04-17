@@ -46,7 +46,7 @@ jobs:
         if: ${{ env.PREV_VER != env.VER }}
         run: pip install -r requirements.txt
 
-      - run: mkdocs build --no-strict
+      - run: mkdocs build -c -v
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
