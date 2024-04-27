@@ -77,11 +77,15 @@ idf.py monitor --print_filter mesh_main
 
 ## Broadcast??
 
+## Companys
+
+* [emerald](https://emeraldinno.com/publications/).
+* [xkcorp](https://xkcorp.com).
+
 ## ESP-MESH-LITE
 [Offical doc](https://components.espressif.com/components/espressif/mesh_lite).
 [examples - no_router](https://github.com/espressif/esp-mesh-lite/tree/master/examples/no_router).
 ESP-MESH-LITE is a Wi-Fi networking application of IoT-Bridge, based on the SoftAP + Station mode, a set of Mesh solutions built on top of the Wi-Fi protocol. ESP-MESH-LITE allows numerous devices (henceforth referred to as nodes) spread over a large physical area (both indoors and outdoors) to be interconnected under a single WLAN (Wireless Local-Area Network). The biggest difference between ESP-MESH-LITE and ESP-MESH (also known as ESP-WIFI-MESH) is that ESP-MESH-LITE allows sub-devices in the network to independently access the external network, and the transmission information is insensitive to the parent node, which greatly reduces the difficulty to develop the application layer. ESP-MESH-LITE is self-organizing and self-healing, which means the network can be built and maintained autonomously.
-
 
 [Enumerations wifi mode](https://espressif-docs.readthedocs-hosted.com/projects/esp-idf/en/stable/api-reference/network/esp_wifi.html#enumerations) like WIFI_MODE_STA ,WIFI_MODE_AP or WIFI_MODE_APSTA.
 
