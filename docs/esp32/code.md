@@ -2,12 +2,12 @@
 
 ## MAC address table
 
-1 - e0:5a:1b:a1:a9:08
-2 - e0:5a:1b:a0:e3:c0
-3 - e0:5a:1b:a1:14:f4
-4 - e0:5a:1b:a1:19:54
-ayaso - 30:de:4b:47:e4:c2
-isaac e8:d1:1b:72:6c:70
+- 1 - e0:5a:1b:a1:a9:08
+- 2 - e0:5a:1b:a0:e3:c0
+- 3 - e0:5a:1b:a1:14:f4
+- 4 - e0:5a:1b:a1:19:54
+- ayaso - 30:de:4b:47:e4:c2
+- isaac e8:d1:1b:72:6c:70
 
 ## Global declaration and functions
 
