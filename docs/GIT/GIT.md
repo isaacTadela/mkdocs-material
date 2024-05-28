@@ -41,3 +41,12 @@ git remote set-url origin https://<USERNAME>:ghp_XXXX@gitlab.xyz.cloud/<PROJECT>
 
 git remote -v
 ```
+
+## vs code shortcut
+
+keyboard shortcut for Git Sync - git.sync
+by default there is none so you need to add it
+
+
+git.push
+
