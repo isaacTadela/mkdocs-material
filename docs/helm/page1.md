@@ -7,3 +7,5 @@ https://github.com/helmfile/helmfile
 
 A helm plugin that shows a diff explaining what a helm upgrade would change
 https://github.com/databus23/helm-diff
+
+```mike deploy --update-aliases 0.1.5 latest --push```
