@@ -16,6 +16,7 @@ jobs:
           fetch-depth: 0
 
       - name: Configure Git
+        continue-on-error: true
         run: |
           git fetch origin gh-pages:gh-pages --depth=1
           remote_repo="https://${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
