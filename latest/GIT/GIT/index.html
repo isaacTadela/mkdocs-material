@@ -438,6 +438,17 @@
 <p>git.sync  - Ctrl + Shift + Enter
 git.push    - ??</p>
 <p>git.undoCommit - Ctrl + Shift + PageDown</p>
+<pre class="mermaid"><code>sequenceDiagram
+  par Local changes
+  Working directory -&gt;&gt; Stash: stash your changes
+  Stash -&gt;&gt; Working directory: apply your changes
+  Working directory -&gt;&gt; Staging directory: add to index
+  Staging directory -&gt;&gt; Local Repo: commit your changes
+  end
+  Remote Repo --&gt;&gt; Local Repo: fetch from remote
+  Local Repo -&gt;&gt; Working directory: checkout branches
+  Local Repo -&gt;&gt; Working directory: merge and rebase branches
+  Remote Repo --&gt;&gt; Working directory: pull from remote</code></pre>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
