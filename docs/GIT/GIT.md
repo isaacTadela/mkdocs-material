@@ -46,8 +46,24 @@ git remote -v
 
 keyboard shortcut for Git Sync, by default there is none so you need to add it
 
+
 git.sync  - Ctrl + Shift + Enter
 git.push    - ??
 
 git.undoCommit - Ctrl + Shift + PageDown
+
+
+```mermaid
+sequenceDiagram
+  par Local changes
+  Working directory ->> Stash: stash your changes
+  Stash ->> Working directory: apply your changes
+  Working directory ->> Staging directory: add to index
+  Staging directory ->> Local Repo: commit your changes
+  end
+  Remote Repo -->> Local Repo: fetch from remote
+  Local Repo ->> Working directory: checkout branches
+  Local Repo ->> Working directory: merge and rebase branches
+  Remote Repo -->> Working directory: pull from remote
+```
 
