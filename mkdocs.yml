@@ -48,6 +48,10 @@ theme:
     - content.action.edit
     - content.code.annotate
 
+  custom_dir: overrides
+  logo: pictures/eso-round-logo.svg
+  favicon: pictures/eso-round-logo.svg
+
   language: en
   palette:
     - scheme: slate
@@ -79,7 +83,8 @@ plugins:
   - mkdocs-pyscript
   - git-authors
   - privacy
-  - macros
+  - macros:
+      include_dir: docs/snippets #Directory for including external files
   - mike:
       alias_type: copy
   - search:
@@ -97,7 +102,6 @@ plugins:
 extra:
   generator: false
   version:
-    method: mike
     provider: mike
     default:
       - latest
