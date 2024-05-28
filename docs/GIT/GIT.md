@@ -44,9 +44,10 @@ git remote -v
 
 ## vs code shortcut
 
-keyboard shortcut for Git Sync - git.sync
-by default there is none so you need to add it
+keyboard shortcut for Git Sync, by default there is none so you need to add it
 
+git.sync  - Ctrl + Shift + Enter
+git.push    - ??
 
-git.push
+git.undoCommit - Ctrl + Shift + PageDown
 
