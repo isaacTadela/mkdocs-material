@@ -44,14 +44,42 @@ git remote -v
 
 ## vs code shortcut
 
-keyboard shortcut for Git Sync, by default there is none so you need to add it
+Open/Close the EXPLORER
+Ctrl + B , Ctrl + ~
 
+Search file name
+Ctrl + P
+
+Scroll
+Ctrl + UpArrow , Ctrl + DownArrow
+
+Navigate to Synbols
+Ctrl + P , then @
+
+Split Editor Window
+Ctrl + \
+
+Close Tab
+Ctrl + w
+
+Insert new line *Below* (\r)
+Ctrl + Enter
+
+selecrt all maching text for rename
+Ctrl + Shift + L
+
+duplicate line down
+Shift + Alt + DownArrow
+
+moving line
+Alt + DownArrow, Alt + UpArrow
+
+keyboard shortcut for Git Sync, by default there is none so you need to add it
 
 git.sync  - Ctrl + Shift + Enter
 git.push    - ??
 
 git.undoCommit - Ctrl + Shift + PageDown
-
 
 ```mermaid
 sequenceDiagram
@@ -66,4 +94,3 @@ sequenceDiagram
   Local Repo ->> Working directory: merge and rebase branches
   Remote Repo -->> Working directory: pull from remote
 ```
-
