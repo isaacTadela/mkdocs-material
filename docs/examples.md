@@ -5,8 +5,12 @@ Some good looking examples:
 - [Mkdocs-material mkdocs.yml](https://github.com/squidfunk/mkdocs-material/blob/master/mkdocs.yml).
 - [Backstage mkdocs.yml](https://github.com/backstage/backstage/blob/master/mkdocs.yml).
 - [Aquasecurity-trivy mkdocs.yml](https://github.com/aquasecurity/trivy/blob/main/mkdocs.yml).
+- [Hatch](https://github.com/pypa/hatch/blob/master/mkdocs.yml)
+- [Atlassian DC Helm Charts](https://github.com/atlassian/data-center-helm-charts/blob/main/docs/mkdocs.yml)
+
+## Plugins and customizations
+
 - [medium mkdocs-plugins](https://chrieke.medium.com/the-best-mkdocs-plugins-and-customizations-fc820eb19759)
-- [hatch](https://github.com/pypa/hatch/tree/master)
 
 ## Reading matireal
 
