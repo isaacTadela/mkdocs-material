@@ -67,17 +67,6 @@ theme:
       primary: teal
       accent: lime
 
-# Page tree
-#nav:
-#  - Home: index.md
-#  - Getting Started:
-#    - Overview: index.md
-#    - Installation: examples.md
-#    - ESP32: esp32/esp32.md
-#    - ESP32 code: esp32/code.md
-#    - Signature Verification: reference/GIT.md
-#    - FAQ: reference/APIs.md
-
 # Plugins
 plugins:
   - mkdocs-pyscript
